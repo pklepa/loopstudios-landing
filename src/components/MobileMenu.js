@@ -34,7 +34,7 @@ const Container = styled.div`
   align-items: flex-start;
   padding: 6rem 2rem 3rem;
 
-  position: absolute;
+  position: fixed;
   top: ${(props) => (props.showMenu ? 0 : "-100vh")};
   left: 0;
 

@@ -52,7 +52,7 @@ const Details = styled.div`
   p {
     color: ${(props) => props.theme.colors.dark_grey};
     text-align: center;
-    padding: 1rem;
+    padding: 0 1rem;
   }
 `;
 
