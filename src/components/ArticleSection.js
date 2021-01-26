@@ -31,7 +31,6 @@ function ArticleSection() {
 const Container = styled.section`
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
 
   padding: 4rem 2rem 2rem;
   width: 100%;
@@ -57,7 +56,7 @@ const Details = styled.div`
   flex-direction: column;
 
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-family: ${(props) => props.theme.fonts.title};
     font-weight: 300;
     text-transform: uppercase;

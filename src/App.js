@@ -8,6 +8,7 @@ import { useState } from "react";
 import MobileMenu from "./components/MobileMenu";
 import HeroSection from "./components/HeroSection";
 import ArticleSection from "./components/ArticleSection";
+import GallerySection from "./components/GallerySection";
 
 const App = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -26,6 +27,8 @@ const App = () => {
         </HeroSection>
 
         <ArticleSection />
+
+        <GallerySection />
       </Layout>
     </ThemeProvider>
   );
