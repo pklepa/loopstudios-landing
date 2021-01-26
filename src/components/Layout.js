@@ -13,6 +13,8 @@ const Container = styled.div`
   min-height: 100vh;
   width: 100%;
 
+  position: relative;
+
   .limit {
     max-width: ${({ theme }) => theme.sizes.desktop};
   }

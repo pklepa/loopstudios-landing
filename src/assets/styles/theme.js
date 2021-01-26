@@ -14,8 +14,8 @@ const theme = {
   },
 
   fonts: {
-    title: "'Alata', sans-serif",
-    text: "'Josefin Sans', sans-serif",
+    title: "'Josefin Sans', sans-serif",
+    text: "'Alata', sans-serif",
   },
 
   sizes: {

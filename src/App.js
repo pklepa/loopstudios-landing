@@ -5,6 +5,7 @@ import GlobalStyle from "./assets/styles/globalStyles.js";
 import Layout from "./components/Layout";
 import Navbar from "./components/Navbar";
 import { useState } from "react";
+import MobileMenu from "./components/MobileMenu";
 
 const App = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -14,6 +15,7 @@ const App = () => {
       <GlobalStyle />
 
       <Layout>
+        <MobileMenu showMenu={showMenu} />
         <Navbar showMenu={showMenu} setShowMenu={setShowMenu} />
       </Layout>
     </ThemeProvider>

@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
 
   html, body {
     font-family: ${(props) => props.theme.fonts.text}; 
+    font-weight: 400;
     color: ${(props) => props.theme.colors.dark_grey};
 
     scroll-behavior: smooth;

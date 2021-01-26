@@ -33,11 +33,13 @@ function Navbar({ showMenu, setShowMenu }) {
 
 const Container = styled.header`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 
   width: 100%;
-  padding: 3rem;
+  padding: 3rem 2rem;
+
+  z-index: 10;
 
   .nav-links {
     display: none;
@@ -45,8 +47,14 @@ const Container = styled.header`
     & > a:not(:first-child) {
       margin-left: 3rem;
     }
+  }
 
-    @media ${(props) => props.theme.devices.tablet} {
+  @media ${(props) => props.theme.devices.tablet} {
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+
+    .nav-links {
       display: flex;
     }
   }
@@ -55,7 +63,6 @@ const Container = styled.header`
 const NavItem = styled.a`
   color: ${(props) => props.theme.colors.white};
   font-size: 1.2rem;
-  font-weight: 600;
 
   position: relative;
 
