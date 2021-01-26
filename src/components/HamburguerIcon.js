@@ -79,6 +79,7 @@ const Icon = styled.a`
     }
     .line-2 {
       opacity: 0;
+      width: 0;
     }
     .line-3 {
       transform: translateY(calc(${(props) => props.myConfig.translateY} * -1))
