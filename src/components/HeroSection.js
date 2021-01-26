@@ -58,8 +58,6 @@ const Container = styled.section`
   }
 
   @media ${(props) => props.theme.devices.tablet} {
-    /* background-position: center center; */
-
     .title-wrapper {
       padding: 0 3rem;
 

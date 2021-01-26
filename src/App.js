@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import { useState } from "react";
 import MobileMenu from "./components/MobileMenu";
 import HeroSection from "./components/HeroSection";
+import ArticleSection from "./components/ArticleSection";
 
 const App = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -23,6 +24,8 @@ const App = () => {
             <h1 className="title">Immersive Experiences That Deliver</h1>
           </div>
         </HeroSection>
+
+        <ArticleSection />
       </Layout>
     </ThemeProvider>
   );

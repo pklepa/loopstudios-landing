@@ -9,7 +9,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: salmon;
+  background-color: ${(props) => props.theme.colors.white};
   min-height: 150vh;
   width: 100%;
 
