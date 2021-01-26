@@ -8,15 +8,17 @@ function GallerySection() {
     <Container>
       <h1>Our Creations</h1>
 
-      {images.map((img) => {
+      {images.map((img, index) => {
         return (
-          <ImgWrapper>
+          <ImgWrapper key={`grid-item-${index}`}>
             <img src={img.src} alt={img.title} />
             <span>{img.title}</span>
             <div className="background"></div>
           </ImgWrapper>
         );
       })}
+
+      <button>See All</button>
     </Container>
   );
 }
@@ -38,6 +40,32 @@ const Container = styled.section`
     text-align: center;
 
     margin: 6rem 0 2rem;
+  }
+
+  button {
+    line-height: 1em;
+    letter-spacing: 2px;
+    font-size: 1.8rem;
+    font-family: ${(props) => props.theme.fonts.title};
+    font-weight: 600;
+    color: ${(props) => props.theme.colors.black};
+    text-transform: uppercase;
+
+    align-self: baseline;
+    justify-self: center;
+
+    background-color: ${(props) => props.theme.colors.white};
+    border: 2px solid ${(props) => props.theme.colors.black};
+    padding: 1.1rem 2rem 0.8rem;
+    margin: 2rem 0;
+
+    transition: all 0.4s;
+
+    &:hover {
+      background-color: ${(props) => props.theme.colors.black};
+      color: white;
+      cursor: pointer;
+    }
   }
 `;
 
