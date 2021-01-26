@@ -6,6 +6,7 @@ import Layout from "./components/Layout";
 import Navbar from "./components/Navbar";
 import { useState } from "react";
 import MobileMenu from "./components/MobileMenu";
+import HeroSection from "./components/HeroSection";
 
 const App = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -16,7 +17,12 @@ const App = () => {
 
       <Layout>
         <MobileMenu showMenu={showMenu} />
-        <Navbar showMenu={showMenu} setShowMenu={setShowMenu} />
+        <HeroSection>
+          <Navbar showMenu={showMenu} setShowMenu={setShowMenu} />
+          <div className="limit title-wrapper">
+            <h1 className="title">Immersive Experiences That Deliver</h1>
+          </div>
+        </HeroSection>
       </Layout>
     </ThemeProvider>
   );
