@@ -28,6 +28,7 @@ const Container = styled.section`
   background-attachment: fixed;
 
   height: 90vh;
+  padding: 0 1rem;
 
   display: flex;
   align-items: center;

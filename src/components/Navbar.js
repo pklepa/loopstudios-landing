@@ -39,7 +39,7 @@ const Container = styled.header`
   width: 100%;
   padding: 3rem 0;
 
-  z-index: 10;
+  z-index: 20;
 
   .nav-links {
     display: none;

@@ -39,6 +39,7 @@ const Container = styled.div`
   left: 0;
 
   transition: all 0.6s;
+  z-index: 15;
 `;
 
 const NavItem = styled.a`
