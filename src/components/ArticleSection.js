@@ -1,15 +1,34 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 
 import useWindowDimensions from "../assets/utils/useWindowDimensions";
 import Img from "../assets/images/mobile/image-interactive.jpg";
 import ImgDesktop from "../assets/images/desktop/image-interactive.jpg";
 
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { revealVariant } from "../assets/utils/variants";
+
 function ArticleSection() {
   const { width } = useWindowDimensions();
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
 
   return (
-    <Container>
+    <Container
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={revealVariant}
+    >
       <img
         src={width < 850 ? Img : ImgDesktop}
         alt="Exited man wearing a virtual reality headset"
@@ -28,7 +47,7 @@ function ArticleSection() {
   );
 }
 
-const Container = styled.section`
+const Container = styled(motion.section)`
   display: flex;
   flex-direction: column;
 

@@ -1,14 +1,32 @@
-import React from "react";
+import { motion, useAnimation } from "framer-motion";
+import React, { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
 
 import useWindowDimensions from "../assets/utils/useWindowDimensions";
+import { revealVariant } from "../assets/utils/variants";
 import { images, imagesDesktop } from "./GalleryImages";
 
 function GallerySection() {
   const { width } = useWindowDimensions();
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0.3,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
 
   return (
-    <Container>
+    <Container
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={revealVariant}
+    >
       <h1>Our Creations</h1>
 
       <GalleryContainer>
@@ -38,7 +56,7 @@ function GallerySection() {
   );
 }
 
-const Container = styled.section`
+const Container = styled(motion.section)`
   display: flex;
   flex-direction: column;
   align-items: center;

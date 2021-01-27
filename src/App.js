@@ -4,7 +4,7 @@ import theme from "./assets/styles/theme";
 import GlobalStyle from "./assets/styles/globalStyles.js";
 import Layout from "./components/Layout";
 import Navbar from "./components/Navbar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MobileMenu from "./components/MobileMenu";
 import HeroSection from "./components/HeroSection";
 import ArticleSection from "./components/ArticleSection";
