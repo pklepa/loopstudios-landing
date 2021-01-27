@@ -66,19 +66,22 @@ const NavItem = styled.a`
   position: relative;
 
   &::after {
-    content: "";
     position: absolute;
-    bottom: -10px;
+    content: "";
+    bottom: -0.5em;
     left: 25%;
-    width: 0;
-    height: 2px;
-    background-color: ${(props) => props.theme.colors.white};
 
-    transition: 0.4s;
+    width: 50%;
+    height: 3px;
+    border-radius: 2px;
+    transform: scaleX(0);
+
+    background-color: ${(props) => props.theme.colors.white};
+    transition: all 0.4s;
   }
 
   &:hover::after {
-    width: 50%;
+    transform: scaleX(1);
   }
 `;
 

@@ -82,14 +82,14 @@ const NavItems = styled.div`
 
       width: 50%;
       height: 2px;
-      transform: scale(0);
+      transform: scaleX(0);
 
       background-color: ${(props) => props.theme.colors.white};
       transition: all 0.4s;
     }
 
     &:hover::after {
-      transform: scale(1);
+      transform: scaleX(1);
     }
   }
 
@@ -113,14 +113,14 @@ const SocialLinks = styled.div`
 
       width: 100%;
       height: 2px;
-      transform: scale(0);
+      transform: scaleX(0);
 
       background-color: ${(props) => props.theme.colors.white};
       transition: all 0.4s;
     }
 
     &:hover::after {
-      transform: scale(1);
+      transform: scaleX(1);
     }
   }
 
