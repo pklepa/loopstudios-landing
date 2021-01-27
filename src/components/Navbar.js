@@ -6,7 +6,7 @@ import HamburguerIcon from "./HamburguerIcon";
 
 function Navbar({ showMenu, setShowMenu }) {
   return (
-    <Container className="limit">
+    <Container>
       <img src={Logo} alt="Loopstudios logo" />
 
       <HamburguerIcon showMenu={showMenu} setShowMenu={setShowMenu} />

@@ -22,7 +22,7 @@ function Footer() {
         </NavItems>
       </InnerContainer>
 
-      <InnerContainer>
+      <InnerContainer left>
         <SocialLinks>
           <a href="https://facebook.com" className="img-wrapper">
             <SocialIcon src={Facebook} alt="Facebook" />
@@ -51,6 +51,12 @@ const Container = styled.footer`
   background-color: ${(props) => props.theme.colors.black};
 
   padding: 3rem 1rem;
+
+  @media ${(props) => props.theme.devices.tablet} {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3rem 3rem;
+  }
 `;
 
 const InnerContainer = styled.div`
@@ -59,10 +65,18 @@ const InnerContainer = styled.div`
   align-items: center;
 
   padding: 1rem 0;
+
+  @media ${(props) => props.theme.devices.tablet} {
+    align-items: ${(props) => (props.left ? "flex-end" : "flex-start")};
+  }
 `;
 
 const Logo = styled.img`
   margin-bottom: 3rem;
+
+  @media ${(props) => props.theme.devices.tablet} {
+    margin-bottom: 1.5rem;
+  }
 `;
 
 const NavItems = styled.div`
@@ -95,6 +109,15 @@ const NavItems = styled.div`
 
   a:not(:last-child) {
     margin-bottom: 1rem;
+  }
+
+  @media ${(props) => props.theme.devices.tablet} {
+    flex-direction: row;
+
+    a:not(:last-child) {
+      margin: 0;
+      margin-right: 1rem;
+    }
   }
 `;
 
@@ -133,6 +156,7 @@ const SocialIcon = styled.img``;
 
 const License = styled.span`
   color: ${(props) => props.theme.colors.dark_grey};
+  text-align: center;
 `;
 
 export default Footer;

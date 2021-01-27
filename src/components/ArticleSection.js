@@ -9,7 +9,7 @@ function ArticleSection() {
   const { width } = useWindowDimensions();
 
   return (
-    <Container className="limit">
+    <Container>
       <img
         src={width < 850 ? Img : ImgDesktop}
         alt="Exited man wearing a virtual reality headset"

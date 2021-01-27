@@ -43,6 +43,7 @@ const Container = styled.section`
   flex-direction: column;
   align-items: center;
 
+  /* width: 100%; */
   padding: 4rem 1rem;
 
   position: relative;
