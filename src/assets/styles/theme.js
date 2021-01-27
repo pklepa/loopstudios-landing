@@ -26,8 +26,8 @@ const theme = {
   },
 
   devices: {
-    sm_mobile: `(min-width: ${sizes.mobile})`,
-    mobile: `(min-width: ${sizes.lg_mobile})`,
+    mobile: `(min-width: ${sizes.mobile})`,
+    lg_mobile: `(min-width: ${sizes.lg_mobile})`,
     tablet: `(min-width: ${sizes.tablet})`,
     desktop: `(min-width: ${sizes.desktop})`,
   },

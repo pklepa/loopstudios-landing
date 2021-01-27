@@ -35,7 +35,6 @@ const Container = styled.section`
 
   .title-wrapper {
     width: 100%;
-    padding: 0 2rem;
     flex: 1;
 
     display: flex;
@@ -57,10 +56,14 @@ const Container = styled.section`
     }
   }
 
-  @media ${(props) => props.theme.devices.tablet} {
-    .title-wrapper {
-      padding: 0 3rem;
+  @media ${(props) => props.theme.devices.lg_mobile} {
+    padding: 0 2rem;
+  }
 
+  @media ${(props) => props.theme.devices.tablet} {
+    padding: 0 3rem;
+
+    .title-wrapper {
       .title {
         font-size: 4rem;
         max-width: 600px;

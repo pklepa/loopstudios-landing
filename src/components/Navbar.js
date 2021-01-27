@@ -37,7 +37,7 @@ const Container = styled.header`
   justify-content: space-between;
 
   width: 100%;
-  padding: 3rem 2rem;
+  padding: 3rem 0;
 
   z-index: 10;
 
@@ -52,7 +52,6 @@ const Container = styled.header`
   @media ${(props) => props.theme.devices.tablet} {
     display: flex;
     align-items: center;
-    padding: 3rem;
 
     .nav-links {
       display: flex;
