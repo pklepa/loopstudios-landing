@@ -9,6 +9,7 @@ import MobileMenu from "./components/MobileMenu";
 import HeroSection from "./components/HeroSection";
 import ArticleSection from "./components/ArticleSection";
 import GallerySection from "./components/GallerySection";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -29,6 +30,8 @@ const App = () => {
         <ArticleSection />
 
         <GallerySection />
+
+        <Footer />
       </Layout>
     </ThemeProvider>
   );
