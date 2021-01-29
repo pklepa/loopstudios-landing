@@ -61,7 +61,7 @@ const Container = styled(motion.section)`
   flex-direction: column;
   align-items: center;
 
-  /* width: 100%; */
+  width: 100%;
   padding: 4rem 1rem;
 
   position: relative;
@@ -122,6 +122,7 @@ const GalleryContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1rem;
+  width: 100%;
 
   @media ${(props) => props.theme.devices.tablet} {
     grid-template-columns: repeat(4, 1fr);
